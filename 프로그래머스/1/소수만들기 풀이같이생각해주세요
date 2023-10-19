@@ -1,0 +1,39 @@
+class Solution {
+    public int solution(int[] nums) {
+     int answer = 0;
+    int index = 0;
+    int notSosu = 0;
+    
+    
+    
+    int[] n = new int[nums.length*(nums.length-1)*(nums.length-2)];
+    
+    for(int i =0 ; i<nums.length ; i++){
+        for(int j =0 ; i<j && j<nums.length ; j++){
+           for(int k =0 ; j<k && k<nums.length ; k++){
+               if(i>0 && j>i && k>j) {
+        	   n[index++] = nums[i]+nums[j]+nums[k];
+               }
+           }
+        }
+    }
+    
+    System.out.println(n.length);
+    
+    for(int i = 0 ; i< n.length ; i++) {
+    	notSosu = 0;
+    	for(int k = n[i]-1;k>1;k--) {
+    		if((n[i]%k)==0) {
+    			notSosu++;
+    		}
+    	}
+    	if(notSosu==0) {
+    		answer ++;
+    	}
+    	
+    }
+    
+    
+    return answer;
+}
+}
