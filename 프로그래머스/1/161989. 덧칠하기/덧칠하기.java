@@ -1,14 +1,12 @@
 class Solution {
     public int solution(int n, int m, int[] section) {
-        int answer = 0;
-        
-        for(int i = 1 ;i<=n ; i++)
-        { for(int j=0 ; j<section.length;j++)
-            if(section[j]==i){
-                i= i+m;
-                answer ++;
+        int maxPainted = 0, cntPaint = 0;
+        for (int point : section) {
+            if (maxPainted <= point) {
+                maxPainted = point + m;
+                cntPaint++;
             }
         }
-        return answer;
+        return cntPaint;
     }
 }
