@@ -17,15 +17,16 @@ class Solution {
                 
 		}
 		
-	/*	int[] answer = new int[answer1.size()];
+		int[] answer = new int[answer1.size()];
 		
 		for(int i = 0 ; i <answer1.size() ; i++) {
 			answer[i] = answer1.get(i);
-		}   */
+		}
 		
-		int[] arr1 = answer1.stream().mapToInt(i -> i).toArray();
+		
+		
 		
 
-		return arr1;
+		return answer;
 	}
 }
