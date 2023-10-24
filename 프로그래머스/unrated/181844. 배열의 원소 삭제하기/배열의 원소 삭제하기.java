@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 class Solution {
- public ArrayList<Integer> solution(int[] arr, int[] delete_list) {
+ public int[] solution(int[] arr, int[] delete_list) {
 		ArrayList<Integer> answer1 = new ArrayList<>();
 
 		for (int i = 0; i < arr.length; i++) {
@@ -17,16 +17,15 @@ class Solution {
                 
 		}
 		
-		/*int[] answer = new int[answer1.size()];
+	/*	int[] answer = new int[answer1.size()];
 		
 		for(int i = 0 ; i <answer1.size() ; i++) {
 			answer[i] = answer1.get(i);
-		}*/
+		}   */
 		
-		
-		
+		int[] arr1 = answer1.stream().mapToInt(i -> i).toArray();
 		
 
-		return answer1;
+		return arr1;
 	}
 }
