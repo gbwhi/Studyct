@@ -1,17 +1,18 @@
 class Solution {
-    public String solution(String rsp) {
+   public String solution(String rsp) {
         String answer = "";
-        
-        rsp = rsp.replaceAll("2","a");
-        rsp = rsp.replaceAll("0","b");
-        rsp = rsp.replaceAll("5","c");
-        rsp = rsp.replaceAll("a","0");
-        rsp = rsp.replaceAll("b","5");
-        rsp = rsp.replaceAll("c","2");
-        
-        
-        
-        
-        return rsp;
+        String[] rspArr = rsp.split("");
+        for(int i = 0; i < rspArr.length; i++){
+            if(rspArr[i].equals("2")){
+                answer += "0";
+            }
+            else if(rspArr[i].equals("0")){
+                answer += "5";
+            }
+            else if(rspArr[i].equals("5")){
+                answer += "2";
+            }
+        }
+        return answer;
     }
 }
