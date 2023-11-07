@@ -12,9 +12,9 @@ class Solution {
 		if (Character.isLowerCase(arr1[0])) {
 			arr[0] = arr[0].toUpperCase();
 		}
-		answer = answer.append(arr[0]);
+		//answer = answer.append(arr[0]);
 
-		for (int i = 1; i < s.length()-1; i++) {
+		for (int i = 0; i < s.length()-1; i++) {
 			if (arr[i].equals(" ") ) {
 				if (Character.isLowerCase(arr1[i + 1])) {
 					arr[i + 1] = arr[i + 1].toUpperCase();
@@ -22,7 +22,7 @@ class Solution {
 			}
 		}
 
-		for (int i = 1; i < s.length(); i++) {
+		for (int i = 0; i < s.length(); i++) {
 			answer = answer.append(arr[i]);
 		}
 
